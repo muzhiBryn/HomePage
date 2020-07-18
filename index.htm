@@ -1,0 +1,273 @@
+<html lang="en" class=" js ">
+
+<head>
+    <title>Jialing Wu's Homepage</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="">
+    <link href="./css/my.css" rel="stylesheet" type="text/css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script>
+        // $(function() {
+        //     $("#header").load("./part/header.html");
+        // });
+        function ScrollTo(name) {
+          ScrollToResolver(document.getElementById(name));
+        }
+
+        function ScrollToResolver(elem) {
+          var jump = parseInt((elem.getBoundingClientRect().top - 90) * .35);
+          document.body.scrollTop += jump;
+          document.documentElement.scrollTop += jump;
+          if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
+            elem.lastjump = Math.abs(jump);
+            console.log(jump);
+            console.log(elem.getBoundingClientRect().top);
+            setTimeout(function() { ScrollToResolver(elem);}, "25");
+          } else {
+            elem.lastjump = null;
+          }
+        }
+    </script>
+
+</head>
+
+<body class="layout--single" style="margin-bottom: 254px;">
+
+    <div class="masthead">
+        <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <button><div class="navicon"></div></button>
+                <ul class="visible-links">
+                    <li class="masthead__menu-item masthead__menu-item--lg"><a href="">Jialing Wu's Homepage</a></li>
+                    <li class="masthead__menu-item" onclick="ScrollTo('about-me')"><a>About Me</a></li>
+                    <li class="masthead__menu-item" onclick="ScrollTo('publications')"><a>Publications</a></li>
+                    <li class="masthead__menu-item" onclick="ScrollTo('press-coverage')"><a>Portfolio&Video</a></li>
+                    <li class="masthead__menu-item"><a href="jialing_07cv.pdf">CV</a></li>
+                    <!-- <li class="masthead__menu-item"><a href="">Courses</a></li> -->
+                </ul>
+                <ul class="hidden-links hidden"></ul>
+            </nav>
+        </div>
+        </div>
+    </div>
+
+
+    <div id="main" role="main">
+
+        <div class="sidebar sticky">
+            <div itemscope="" itemtype="https://schema.org/Person">
+
+                <div class="author__avatar">
+                    <img src="./image/1.png" class="author__avatar" alt="Weichen Wang" itemprop="image">
+                </div>
+
+
+                <div class="author__content">
+                    <h3 class="author__name" itemprop="name">Jialing Wu</h3>
+
+                    <p class="author__bio" itemprop="description">
+                        Master student in the department of Computer Science at Dartmouth College
+                    </p>
+                </div>
+
+                <div class="author__urls-wrapper">
+                    <button class="btn btn--inverse">Follow</button>
+                    <ul class="author__urls social-icons" style="display: block;">
+                        <li>
+                            <a href="mailto:jialing.wu@live.com">
+                                <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i>
+                                Email
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/marinda0/" itemprop="sameAs">
+                                <i class="fa fa-fw fa-linkedin" aria-hidden="true"></i>
+                                Linkedin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+<!--                 <div class="up-to-top">
+                    <img src="./image/arrow.png"> Top
+                </div> -->
+
+
+            </div>
+
+
+        </div>
+
+
+        <article class="page" itemscope="" itemtype="https://schema.org/CreativeWork">
+
+            <div class="page__inner-wrap">
+
+                <header>
+
+
+                </header>
+
+
+                <section class="page__content" itemprop="text">
+                    <!-- <h2 id="research-funding-and-projects">About Me</h2> -->
+                    <p id="about-me">
+                        I have a multi-discipline background in marketing, communication, media management, behavioral health and computer science. All these experience help me learn very quickly in a totally new area and step out of comfort zone with confidence and courage. I am currently a graduate student in CS department at Dartmouth College and actively looking for new grad position in SDE related field. 
+                    </p>
+
+                    <h2 id="research-interests">Research Interests</h2>
+                    <ul>
+                        <li>Human behavioral modeling using data from mobile systems and social networks.</li>
+                        <li>Ubiquitous computing, mobile sensing applied machine learning, mobile health and data mining.</li>
+                        <li>Mobile sensing systems on Android platforms, full-stack web development and data management.</li>
+                    </ul>
+
+
+
+                    <h2 id="whats-new">What's New</h2>
+                    <ul>
+                        <li>Jun. 2020: Start my summer intern (Technology Planning and Research Team) at <a href="https://www.futurewei.com/">Futurewei! </a></li>
+                        <li>Jun. 2020: President of <a href="https://www.dartmouthcssa.org/">Dartmouth Chinese Students and Scholars Association(CSSA)</a>(2020-2021)</li>
+                        <li>Jun. 2020: Patent: System and methods of multimodal mobile health management for agents with communication difficulty(Approved, under issuing)</li>
+                        <li>Jun. 2020: Our paper on <a href="https://www.jmir.org/2020/6/e20185/">Mental Health and Behavior During the Early Phases of the COVID-19 Pandemic </a> accepted by <a href="https://www.jmir.org/">JMIR</a>.</l>
+                        <li>Jan. 2020: Our paper on <a href="https://dl.acm.org/doi/abs/10.1145/3313831.3376855">Social Functioning Assessing Using Mobile Phone Sensing</a>accepted by CHI'20!</li>
+						
+                        <details>
+						  <summary>See More</summary>
+						  	<li>Jan. 2020 ~ Present: Research Assistant at <a href="https://dartnets.cs.dartmouth.edu/">DartNets Lab</a>, Computer Science Department, Dartmouth College. Advisor: <a href="https://www.cs.dartmouth.edu/~campbell/">Professor Andrew Campbell</a> in the Computer Science department at Dartmouth College.</li>
+                            <li>Sep. 2019 ~ Jun. 2021: Full Scholarship of Graduate Student at Computer Science Department, Dartmouth College</li>
+                            <li>Mar. 2020 ~ Jun. 2020: Successfully achieved four courses in the Spring Term, including the Full-Stack Web Development,  Smartphone Programming, Cognitive Computing with Watson and Data Science for Health. High Pass in Smartphone Programming!</li>
+						</details>
+
+                    </ul>
+
+
+
+                    <h2 id="publications">Publications</h2>
+                    <!-- See <a href="https://scholar.google.com/citations?user=-3j053AAAAAJ&hl=en">Google Scholar</a> for my citations and publications. -->
+
+					<h3>2020</h3>
+					<ol start="6" reversed="true">
+
+                        <li>
+						    <p>
+			                    <strong>System and Methods of Multimodal Mobile Health Management for Agents with Communication Difficulty</strong></a><br/>
+			                    Jialing Wu, Yingxuan Zhu, Han Su, Jian Li. <br/>
+			                    Under issueing, 2020
+			                    <span class="btn btn--inverse btnspan">PATENT</span><span class="btn btn--inverse btnspan">USA</span>
+			                </p>
+                        </li>
+
+
+                        <li>
+						    <p>
+			                    <strong>An Intelligent Energy-driven System for Mobile Health Management</strong></a><br/>
+			                    Jialing Wu, Yingxuan Zhu, Lifeng Liu, Han Su, Yizhuo Chen, Jian Li. <br/>
+			                    Under reviewing(workshop), 2020
+			                    <span class="btn btn--inverse btnspan">INTERNET</span>
+			                </p>
+                        </li>
+
+                        <li>
+						    <p>
+			                    <strong>Loop Users In: The Key to Cross-Platform Data Interoperability</strong></a><br/>
+			                    Han Su, Jialing Wu, Lifeng Liu, Yingxuan Zhu, Jian Li. <br/>
+			                    Under reviewing(workshop), 2020
+			                    <span class="btn btn--inverse btnspan">INTERNET</span>
+			                </p>
+                        </li>
+                        
+                        <li>
+						    <p>
+			                    <strong>On the Transition of Social Interaction from In-Person to Online during the COVID-19 Pandemic: Predicting Changes in Social Media Usage of College Students based on On-Campus Co-Location from Mobile Phones.</strong></a><br/>
+			                    Weichen Wang, Jialing Wu, Subigya K Nepal, Jeremy Huckins, Alex W DaSilva, Elin L Hedlund, Courtney Rogers, Mikio Obuchi, Eilis I Murphy, Meghan L Meyer, Dylan D Wagner, Paul E Holtzheimer, Andrew T Campbell. <br/>
+			                    Under reviewing, 2020
+			                    <span class="btn btn--inverse btnspan">CSCW</span>
+			                </p>
+						</li>
+
+
+						<li>
+						    <p>
+								<a href="https://www.jmir.org/2020/6/e20185/"><strong>Mental Health and Behavior During the Early Phases of the COVID-19 Pandemic: A Longitudinal Mobile Smartphone and Ecological Momentary Assessment Study in College Students.</strong></a><br/>
+								Jeremy Huckins, Alex W DaSilva, Weichen Wang, Elin L Hedlund, Courtney Rogers, Subigya K Nepal, Jialing Wu, Mikio Obuchi, Eilis I Murphy, Meghan L Meyer, Dylan D Wagner, Paul E Holtzheimer, Andrew T Campbell. <br/>
+								Journal of Medical Internet Research (JMIR), 2020;22(6):e20185
+								<span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 5.0</span>
+						    </p>
+						</li>
+
+
+						<li>
+						    <p>
+			                    <a href="https://dl.acm.org/doi/abs/10.1145/3313831.3376855"><strong>Social Sensing: Assessing Social Functioning of Patients Living with Schizophrenia using Mobile Phone Sensing.</strong></a><br/>
+			                    Weichen Wang, Shayan Mirjafari, Gabriella Harari, Dror Ben-Zeev, Rachel Brain, Tanzeem Choudhury, Marta Hauser, John Kane, Kizito Masaba, Subigya Nepal, Akane Sano, Emily Scherer, Vincent Tseng,
+			                    Rui Wang, Hongyi Wen, Jialing Wu, Andrew Campbell. <br/>
+			                    Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI'20), Honolulu, April. 2020.
+			                    <span class="btn btn--inverse btnspan">CHI</span><span class="btn btn--inverse btnspan">CCF A</span>
+			                </p>
+						</li>
+
+				
+			    	</ol>
+
+
+					
+
+
+                    <h3>Before 2019</h3>
+                    See <a href="https://www.cnki.net/">CNKI</a> for my citations and publications.
+                    
+
+
+                    
+
+                      
+
+
+
+
+                    <h2 id="press-coverage">Portfolio and Videos</h2>
+                    <p>
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">YouTube Video</span>
+                            <a href="https://www.youtube.com/watch?v=tdgFhx6M_tc">Election of 2020-2021 Dartmouth CSSA President.</a> June 22, 2020<br><br>
+                        </div>
+
+			            <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Session in Data Science for Health</span>
+                            <a href="https://sph.washington.edu/news-events/news/smartphones-may-help-predict-risk-relapse-people-schizophrenia">A Disscussion of "Multi-Task Learning for Mental Health using Social Media Text".</a> April 23, 2020<br>
+                        </div>
+
+                    
+
+                    </p>
+
+
+
+
+                    <p><br> Last updated: June 2020.</p>
+                     <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=m&d=PPTzYKXdAc-Uc3_0kZ1M3U9va5Pi3-XeLLCkEhhxWaw&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+
+<!--                     <a href="https://clustrmaps.com/site/1a1g1" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=n&d=PPTzYKXdAc-Uc3_0kZ1M3U9va5Pi3-XeLLCkEhhxWaw&co=ffffff&ct=808080" /></a> -->
+
+                </section>
+
+            </div>
+
+        </article>
+    </div>
+
+
+    <div class="page__footer">
+        <footer>
+            <div class="page__footer-copyright">© 2020 Jialing Wu's Homepage.</div>
+        </footer>
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
